@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5efe2">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23244443'/%3E%3Cpath d='M9 25h14M12 24l2-13h4l2 13M11 11l5-5 5 5Z' stroke='%23f5efe2' fill='none' stroke-width='1.6'/%3E%3C/svg%3E">
+  <title>Gull Point · Spot the difference</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./src/app.mjs"></script>
+</head>
+<body>
+  <main class="fieldbook">
+    <header class="masthead">
+      <div class="identity">
+        <svg viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+          <rect width="40" height="40" rx="8" fill="currentColor"/>
+          <path d="M11 29h18m-14-1 2-13h6l2 13M15 15l5-5 5 5m-7 6h4m5-6 5-2m-19 2-5-2" fill="none" stroke="#f5efe2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div><strong>Gull Point</strong><span>Spot the difference</span></div>
+      </div>
+      <div class="settings">
+        <button type="button" id="sound" aria-pressed="false">Sound off</button>
+        <button type="button" id="mode" aria-pressed="false">Timed mode</button>
+      </div>
+    </header>
+
+    <section class="survey" aria-labelledby="survey-title">
+      <div class="survey-heading">
+        <nav id="survey-nav" aria-label="Choose a survey"></nav>
+        <h1 id="survey-title"></h1>
+        <p id="survey-description"></p>
+      </div>
+      <div class="progress-card">
+        <div class="tally"><strong id="remaining"></strong><span>differences left</span></div>
+        <div id="ticks" aria-hidden="true"></div>
+        <div id="clock" hidden>
+          <span id="clock-value" aria-label="Time left"></span>
+          <progress id="time-bar" aria-label="Time left"></progress>
+        </div>
+      </div>
+    </section>
+
+    <p class="sr-only" id="keyboard-help">Use arrow keys to move the crosshair, then Enter or Space to inspect. Hold Shift for finer movement.</p>
+    <div class="plates" id="plates"></div>
+
+    <section class="tools" aria-label="Hunt controls">
+      <div class="field-note">
+        <span id="note-label">Field note</span>
+        <p id="message" role="status"></p>
+      </div>
+      <div class="actions">
+        <button type="button" id="hint"><span aria-hidden="true">✧</span> <span id="hint-text">Hint</span></button>
+        <button type="button" id="replay"><span aria-hidden="true">↻</span> Replay</button>
+        <button type="button" class="primary" id="next" hidden>Evening survey <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+    <details class="help">
+      <summary>How to play</summary>
+      <p>Compare the two pictures. Tap or click a difference in either view to mark it in both. With a keyboard, Tab to a picture, move with the arrow keys, and press Enter to inspect. Hold Shift for smaller steps.</p>
+      <p>In timed mode the clock starts on your first guess or hint. An incorrect guess costs four seconds. Switching modes starts the survey over.</p>
+    </details>
+  </main>
+</body>
+</html>

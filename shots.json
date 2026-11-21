@@ -1,0 +1,20 @@
+[
+  {
+    "name": "01-morning.jpg",
+    "survey": "Morning survey",
+    "mode": "untimed",
+    "found": ["pennant", "sail", "buoy"]
+  },
+  {
+    "name": "02-evening.jpg",
+    "survey": "Evening survey",
+    "mode": "timed",
+    "found": ["chimney", "stripe", "mooring"]
+  },
+  {
+    "name": "03-complete.jpg",
+    "survey": "Evening survey",
+    "mode": "timed",
+    "found": ["chimney", "stripe", "mooring", "window", "barrel", "basket", "sail", "crate"]
+  }
+]
